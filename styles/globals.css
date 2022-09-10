@@ -8,4 +8,16 @@
 
         @apply hover:underline cursor-pointer
     }
+
+    .btn {
+        @apply bg-[#f8f9fa] 
+        p-2
+        rounded-md 
+        ring-gray-200
+        hover:ring-1
+        focus:outline-none
+        active:ring-gray-300
+       
+        hover:shadow-md
+    }
 }
