@@ -17,8 +17,9 @@ const router = useRouter()
         <link rel='icon' href='/google.svg'/>
     </Head>
     
-    <SearchResults results={results}/>
+    
     <Header/>
+    <SearchResults results={results}/>
     </div>   
     );
 }
@@ -26,10 +27,10 @@ const router = useRouter()
 export default Search;
 
 export async function getServerSideProps(context){
-    const useDummyData = true
-    const startIndex = context.query.start || "0"
+    const useDummyData = false
+    const startIndex = context.query.start || "0" 
 
-    const data = useDummyData ? responseData : await fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start={startIndex}`)
+    const data = useDummyData ? responseData : await fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`)
     .then((response) => response.json())
 
 
