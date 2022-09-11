@@ -36,7 +36,7 @@ selected/>
 
             </div>
 
-            <div className="flex ml-auto pr-2">
+            <div className="flex ml-auto pr-8">
                 <p className="link">Tools</p>
             </div>
         </div>

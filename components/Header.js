@@ -4,6 +4,7 @@ import { MicrophoneIcon, SearchIcon, XIcon} from '@heroicons/react/solid'
 import { useRef } from 'react'
 import Avatar from "./Avatar"
 import HeaderOptions from '../components/HeaderOptions'
+
 function Header(){
     
     const router = useRouter()
@@ -66,7 +67,10 @@ function Header(){
       hidden sm:inline-flex"/>
       <button hidden type="submit" onClick={search}>Search</button>
     </form>
+ 
+
    <Avatar className="ml-auto" url={'https://lh3.googleusercontent.com/a-/AFdZucr8FsQ21ozIQjjZnCLPMW_eed7hypWYvtsdXVAOjxw=s288-p-rw-no'}/>
+     
        </div>
         
         <HeaderOptions/>
